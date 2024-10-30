@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CFNext</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <nav id="navbar" class="hidden">
+      <div>
+        <h1 id="handle_display">Indegrowl</h1>
+        <p id="rating_display">1600</p>
+      </div>
+      <button id="logout">Logout</button>
+    </nav>
+    <form it="handle_login()" id="login" class="login card">
+      <h1>Login</h1>
+      <input id="handle" placeholder="Codeforces Handle" type="text" class="handle"/>
+      <button id="submit">Submit</button>
+    </form>
+
+    <div id="game-setup" class="game-setup hidden">
+      <div class="difficulty-selector">
+        <div class="difficulty-selector">
+          <div class="difficulty-labels">
+            <span>Easy</span>
+            <span>Medium</span>
+            <span>Hard</span>
+          </div>
+          <input 
+          type="range" 
+          min="-20" 
+          max="20" 
+          value="0" 
+          step="0.1" 
+          class="slider" 
+          id="difficulty"
+          />
+        </div>
+      </div>
+
+      <!-- <div class="time-selector"> -->
+      <!--   <select id="time-dropdown"> -->
+      <!--     <option value="10">10 mins</option> -->
+      <!--     <option value="30">30 mins</option> -->
+      <!--   </select> -->
+      <!-- </div> -->
+
+      <button id="start">Start Solving</button>
+    </div>
+
+    <div class="game-interface hidden" id="game-screen">
+      <div class="timer-container">
+        <div id="timer-display" class="timer" id="timer">10:00</div>
+      </div>
+      <div class="problem-details">
+        <a id="problem-link" target="_blank" href="">Problem Link</a>
+        <div>
+          <span id="rating-ascent" style="color: #32fa32;">+24</span>/
+          <span id="rating-descent" style="color: #fa3232;">-18</span>
+        </div>
+      </div>
+      <div class="control-buttons">
+        <button id="give-up" class="control-btn danger">Give Up</button>
+        <button id="solved" class="control-btn success">Solved!</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js" type="module"></script>
+</html>
